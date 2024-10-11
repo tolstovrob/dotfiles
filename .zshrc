@@ -43,7 +43,7 @@ git_info() {
       echo " ${repo}:${branch}"
     fi
   else
-    echo "󰊢 No git repo"
+    echo ""
   fi
 }
 
