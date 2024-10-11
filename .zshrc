@@ -47,10 +47,11 @@ git_info() {
   fi
 }
 
-PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%}     $(git_info)%b
+PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%} $(git_info)%b
 %B$ %{$fg[white]%}% %n@%m -> %b"
 
 function precmd() {
-  PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%}     $(git_info)%b
+  echo ""
+  PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%} $(git_info)%b
 %B$ %{$fg[white]%}% %n@%m -> %b"
 }
