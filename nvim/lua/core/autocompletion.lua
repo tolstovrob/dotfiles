@@ -1,7 +1,6 @@
 -- [[ Built-in autocompletion settings ]]
 
-local opt = vim.opt                                               -- Nvim options alias
-local g = vim.g                                                   -- Global nvim variables
+require("core.alias")
 
 opt.completeopt = "menuone,noselect"                              -- Setting up autocompletion
 g.completion_matching_strategy = {"exact", "substring", "fuzzy"}  -- Matching strategy for completion

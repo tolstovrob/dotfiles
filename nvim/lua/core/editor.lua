@@ -1,7 +1,6 @@
 -- [[ Editor settings ]]
 
-local opt = vim.opt                                   -- Nvim options alias
-local g = vim.g                                       -- Global nvim variables
+require("core.alias")
 
 opt.clipboard = "unnamedplus"                         -- Highlight searched items
 opt.fixeol = true                                     -- Decides whether file ends with LF or CRLF
