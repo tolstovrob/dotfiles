@@ -34,7 +34,9 @@ git_info() {
       branch=$(git rev-parse --short HEAD 2>/dev/null)  # Показываем SHA коммита
     fi
 
-    local repo=$(basename "$(git rev-parse --show-toplevel)" 2>/dev/null)
+    # Получение названия удаленного репозитория
+    local remote_url=$(git remote get-url origin 2>/dev/null)
+    local repo=$(basename "${remote_url%.git}")  # Удаляем .git и получаем название репозитория
 
     # Условие для выбора смайлика
     if [[ "$branch" == "main" || "$branch" == "master" ]]; then
