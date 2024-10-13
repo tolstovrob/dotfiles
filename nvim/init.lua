@@ -3,7 +3,6 @@ require("core.editor")
 require("core.folding")
 require("core.search")
 require("core.autocompletion")
+require("core.keymaps")
 
--- Keymaps
-require("keys.core")
-require("keys.plugins")
+-- Plugins
