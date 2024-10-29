@@ -19,7 +19,10 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Custom aliases
-
+export dev="/home/tolstovrob/Документы/dev"
+export clubs="/home/tolstovrob/Документы/clubs"
+export docs="/home/tolstovrob/Документы/docs"
+export ssu="/home/tolstovrob/Документы/ssu"
 
 # Prompt config
 autoload -U colors && colors
@@ -57,3 +60,6 @@ function precmd() {
   PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%} $(git_info)%b
 %B$ %{$fg[white]%}% %n@%m -> %b"
 }
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
