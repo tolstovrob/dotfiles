@@ -42,11 +42,7 @@ git_info() {
     local repo=$(basename "${remote_url%.git}")  # Удаляем .git и получаем название репозитория
 
     # Условие для выбора смайлика
-    if [[ "$branch" == "main" || "$branch" == "master" ]]; then
-      echo " ${repo}:${branch}"
-    else
-      echo " ${repo}:${branch}"
-    fi
+    echo " ${repo}:${branch}" 
   else
     echo ""
   fi
