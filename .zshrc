@@ -41,8 +41,36 @@ git_info() {
     local remote_url=$(git remote get-url origin 2>/dev/null)
     local repo=$(basename "${remote_url%.git}")  # Удаляем .git и получаем название репозитория
 
-    # Условие для выбора смайлика
-    echo " ${repo}:${branch}" 
+    # Проверка состояния репозитория
+    local untracked_files=$(git ls-files --others --exclude-standard)
+    local changes=$(git status --porcelain)
+
+    local git_status=""
+    
+    if [[ -n "$untracked_files" ]]; then
+      git_status="?"  # Есть хотя бы один неотслеживаемый файл
+    elif [[ -n "$changes" ]]; then
+      git_status="✗"  # Есть хотя бы одно изменение и нет неотслеживаемых файлов
+    else
+      git_status="✓"  # Нет изменений
+      # Проверка на совпадение с origin
+      local upstream=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null)
+      if [[ -n "$upstream" ]]; then
+        local local_commit=$(git rev-parse @)
+        local remote_commit=$(git rev-parse "$upstream")
+        
+        if [[ "$local_commit" == "$remote_commit" ]]; then
+          git_status="↑"  # Совпадает с origin, отображаем стрелочку вверх
+        fi
+      fi
+    fi
+
+    # Условие для выбора цвета и вывода информации
+    if [[ "$git_status" == "↑" ]]; then
+      echo "%{$fg[green]%} ${repo}:${branch} ${git_status}%{$reset_color%}"
+    else
+      echo " ${repo}:${branch} ${git_status}" 
+    fi
   else
     echo ""
   fi
