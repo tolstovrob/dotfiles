@@ -53,17 +53,15 @@ git_info() {
       git_status="✗"  # Есть хотя бы одно изменение и нет неотслеживаемых файлов
     else
       git_status="✓"  # Нет изменений
-      # Проверка на совпадение с origin
-      local upstream=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null)
-      if [[ -n "$upstream" ]]; then
-        local local_commit=$(git rev-parse @)
-        local remote_commit=$(git rev-parse "$upstream")
-        
-        if [[ "$local_commit" == "$remote_commit" ]]; then
-          git_status="↑"  # Совпадает с origin, отображаем стрелочку вверх
-        fi
-      fi
-    fi
+    	
+			# Проверка на совпадение с origin
+      local local_commit=$(git rev-parse HEAD)
+      local remote_commit=$(git rev-parse "origin/$branch" 2>/dev/null)
+
+      if [[ "$local_commit" == "$remote_commit" ]]; then
+        git_status="↑"  # Совпадает с origin, отображаем стрелочку вверх
+      fi  
+		fi
 
     # Условие для выбора цвета и вывода информации
     if [[ "$git_status" == "↑" ]]; then
