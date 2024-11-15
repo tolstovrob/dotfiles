@@ -53,24 +53,13 @@ git_info() {
       git_status="✗"  # Есть хотя бы одно изменение и нет неотслеживаемых файлов
     else
       git_status="✓"  # Нет изменений
-
-      # Проверка на наличие удаленной ветки и совпадение с origin
-      if git remote show origin >/dev/null 2>&1; then
-        local local_commit=$(git rev-parse HEAD)
-        local remote_commit=$(git rev-parse "origin/$branch" 2>/dev/null)
-
-        if [[ "$local_commit" == "$remote_commit" ]]; then
-          git_status="↑"  # Совпадает с origin, отображаем стрелочку вверх
-        fi
-      fi
-    fi
-
-    # Условие для выбора цвета и возврата информации
-    if [[ "$git_status" == "↑" ]]; then
+      # Меняем цвет на зеленый, если нет изменений
       echo "%{$fg[green]%} ${repo}:${branch} ${git_status}%{$reset_color%}"
-    else
-      echo " ${repo}:${branch} ${git_status}" 
+      return
     fi
+
+    # Возвращаем информацию о состоянии репозитория без изменения цвета
+    echo " ${repo}:${branch} ${git_status}" 
   else
     echo ""
   fi
