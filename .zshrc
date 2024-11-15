@@ -53,17 +53,19 @@ git_info() {
       git_status="✗"  # Есть хотя бы одно изменение и нет неотслеживаемых файлов
     else
       git_status="✓"  # Нет изменений
-    	
-			# Проверка на совпадение с origin
-      local local_commit=$(git rev-parse HEAD)
-      local remote_commit=$(git rev-parse "origin/$branch" 2>/dev/null)
 
-      if [[ "$local_commit" == "$remote_commit" ]]; then
-        git_status="↑"  # Совпадает с origin, отображаем стрелочку вверх
-      fi  
-		fi
+      # Проверка на наличие удаленной ветки и совпадение с origin
+      if git remote show origin >/dev/null 2>&1; then
+        local local_commit=$(git rev-parse HEAD)
+        local remote_commit=$(git rev-parse "origin/$branch" 2>/dev/null)
 
-    # Условие для выбора цвета и вывода информации
+        if [[ "$local_commit" == "$remote_commit" ]]; then
+          git_status="↑"  # Совпадает с origin, отображаем стрелочку вверх
+        fi
+      fi
+    fi
+
+    # Условие для выбора цвета и возврата информации
     if [[ "$git_status" == "↑" ]]; then
       echo "%{$fg[green]%} ${repo}:${branch} ${git_status}%{$reset_color%}"
     else
@@ -79,7 +81,7 @@ PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%} $(git_info)%b
 
 function precmd() {
   echo ""
-  PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%} $(git_info)%b
+	PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%} $(git_info)%b
 %B$ %{$fg[white]%}% %n@%m -> %b"
 }
 
