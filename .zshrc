@@ -23,6 +23,7 @@ export dev="/home/tolstovrob/Документы/dev"
 export clubs="/home/tolstovrob/Документы/clubs"
 export docs="/home/tolstovrob/Документы/docs"
 export ssu="/home/tolstovrob/Документы/ssu"
+alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
 
 # Prompt config
 autoload -U colors && colors
@@ -76,3 +77,4 @@ function precmd() {
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+source /home/tolstovrob/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
