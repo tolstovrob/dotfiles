@@ -77,4 +77,3 @@ function precmd() {
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-source /home/tolstovrob/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
