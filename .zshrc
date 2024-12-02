@@ -77,3 +77,5 @@ function precmd() {
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+neofetch
