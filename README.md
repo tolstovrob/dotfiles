@@ -5,6 +5,7 @@
 - [Kitty](https://github.com/kovidgoyal/kitty)
 - [Zsh](https://www.zsh.org/) && [Oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Neovim](https://github.com/neovim/neovim)
+- Neofetch &mdash; install via `sudo apt-get install neofetch` of `sudo pacman -S neofetch`
 
 ## What do I need?
 
