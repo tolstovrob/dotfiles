@@ -66,13 +66,10 @@ git_info() {
   fi
 }
 
-PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%} $(git_info)%b
-%B$ %{$fg[white]%}% %n@%m -> %b"
-
 function precmd() {
   echo ""
-	PROMPT="%B%{$fg[cyan]%}  %~ %{$fg[red]%} $(git_info)%b
-%B$ %{$fg[white]%}% %n@%m -> %b"
+PROMPT="%B%{$fg[white]%}╭── $(date +'%d.%m.%Y') %T ── %{$fg[cyan]%}  %~ %{$fg[white]%}── %{$fg[red]%}$(git_info) %{$fg[white]%} %b
+%B╰── %b%B %{$fg[white]%}% %n@%m -> %b"
 }
 
 export GOPATH=$HOME/go
