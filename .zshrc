@@ -72,7 +72,4 @@ PROMPT="%B%{$fg[white]%}╭── $(date +'%d.%m.%Y') %T ── %{$fg[cyan]%}
 %B╰── %b%B %{$fg[white]%}% %n@%m -> %b"
 }
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
 neofetch
