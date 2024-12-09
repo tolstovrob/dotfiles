@@ -55,12 +55,12 @@ git_info() {
     else
       git_status="✓"  # Нет изменений
       # Меняем цвет на зеленый, если нет изменений
-      echo "%{$fg[green]%} ${repo}:${branch} ${git_status}%{$reset_color%}"
+      echo "%{$fg[white]%}── %{$fg[green]%} ${repo}:${branch} ${git_status}%{$reset_color%}"
       return
     fi
 
     # Возвращаем информацию о состоянии репозитория без изменения цвета
-    echo " ${repo}:${branch} ${git_status}" 
+    echo "%{$fg[white]%}── %{$fg[red]%} ${repo}:${branch} ${git_status}" 
   else
     echo ""
   fi
@@ -68,7 +68,7 @@ git_info() {
 
 function precmd() {
   echo ""
-PROMPT="%B%{$fg[white]%}╭── $(date +'%d.%m.%Y') %T ── %{$fg[cyan]%}  %~ %{$fg[white]%}── %{$fg[red]%}$(git_info) %{$fg[white]%} %b
+PROMPT="%B%{$fg[white]%}╭── $(date +'%d.%m.%Y') %T ── %{$fg[cyan]%}  %~ $(git_info) %{$fg[white]%} %b
 %B╰── %b%B %{$fg[white]%}% %n@%m -> %b"
 }
 
