@@ -1,10 +1,8 @@
 # Default exports
 export ZSH="$HOME/.oh-my-zsh"
 
-
 # Terminal theme
 ZSH_THEME="cloud"
-
 
 # Plugins
 plugins=(
@@ -13,12 +11,10 @@ plugins=(
   zsh-syntax-highlighting   # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 )
 
-
 # Launch Oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-
-# Custom aliases
+# Setup custom aliases
 export dev="/home/tolstovrob/Документы/dev"
 export clubs="/home/tolstovrob/Документы/clubs"
 export docs="/home/tolstovrob/Документы/docs"
@@ -72,4 +68,5 @@ PROMPT="%B%{$fg[white]%}╭── $(date +'%d.%m.%Y') %T ── %{$fg[cyan]%}
 %B╰── %b%B %{$fg[white]%}% %n@%m -> %b"
 }
 
+# Display launch info
 neofetch
