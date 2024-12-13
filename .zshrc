@@ -21,6 +21,7 @@ export docs="/home/tolstovrob/Документы/docs"
 export ssu="/home/tolstovrob/Документы/ssu"
 alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
 alias lt="eza --tree --hyperlink --icons=always --level"
+alias l="eza --tree --hyperlink --icons=always --level 3"
 
 # Prompt config
 autoload -U colors && colors
