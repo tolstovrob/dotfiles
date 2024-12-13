@@ -20,6 +20,7 @@ export clubs="/home/tolstovrob/Документы/clubs"
 export docs="/home/tolstovrob/Документы/docs"
 export ssu="/home/tolstovrob/Документы/ssu"
 alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
+alias lt="eza --tree --hyperlink --icons=always --level"
 
 # Prompt config
 autoload -U colors && colors
