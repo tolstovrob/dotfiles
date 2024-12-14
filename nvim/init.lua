@@ -1,9 +1,2 @@
--- Base config
-require("core.editor")
-require("core.folding")
-require("core.search")
-require("core.autocompletion")
-require("core.keymaps")
-
--- Plugins
-require("core.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
