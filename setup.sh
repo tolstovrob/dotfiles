@@ -4,8 +4,8 @@ removePrevConfig() {
     echo "Removing previous configuration..."
     rm -rf ~/.zshrc
     rm -rf ~/.p10k.zsh
-    rm -rf ~/dotfiles/kitty ~/.config/kitty
-    rm -rf ~/dotfiles/nvim ~/.config/nvim
+    rm -rf ~/.config/kitty
+    rm -rf ~/.config/nvim
 }
 
 # Проверка аргументов
