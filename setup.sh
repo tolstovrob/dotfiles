@@ -3,10 +3,9 @@
 removePrevConfig() {
     echo "Removing previous configuration..."
     rm -rf ~/.zshrc
-    rm -rf ~/.p10k.zsh
     rm -rf ~/.config/kitty
     rm -rf ~/.config/nvim
-    rm -rf ~/powerlevel10k
+    rm -rf ~/.p10k.zsh
 }
 
 # Проверка аргументов
@@ -26,7 +25,6 @@ fi
 echo "Creating symbolic links..."
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/kitty ~/.config/kitty
-ln -s ~/dotfiles/powerlevel10k ~/powerlevel10k
 ln ~/dotfiles/.zshrc ~/.zshrc
 ln ~/dotfiles/.p10k.zsh ~/.p10k.zsh
 

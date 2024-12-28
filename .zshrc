@@ -71,3 +71,5 @@ alias gc="git checkout"
 alias _="sudo"
 alias __="sudo su"
 alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
