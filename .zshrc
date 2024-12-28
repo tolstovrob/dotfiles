@@ -5,8 +5,9 @@ fi
 
 # Oh My zsh config
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
 
+# Load theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Settings
 CASE_SENSITIVE="false"
@@ -25,7 +26,6 @@ plugins=(git)
 # Configuration
 source $ZSH/oh-my-zsh.sh
 export MANPATH="/usr/local/man:$MANPATH"
-export LANG=en_US.UTF-8
 export EDITOR="nano"
 export ARCHFLAGS="-arch $(uname -m)"
 
