@@ -67,3 +67,7 @@ alias glo="git pull origin"
 alias gp="git push"
 alias gpo="git push origin"
 alias gc="git checkout"
+
+alias _="sudo"
+alias __="sudo su"
+alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
