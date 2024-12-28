@@ -1,3 +1,8 @@
+# Check if anything installed
+if ! type exa > /dev/null 2>&1; then
+    echo "ZSH: For enhanced view of ls, install \e[1;31mexa\e[0m package"
+fi
+
 # Oh My zsh config
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
@@ -30,3 +35,11 @@ unalias -m '*'
 
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
+
+l() {
+    if [ "$#" -eq 0 ]; then
+        exa --tree --icons --color=always -L 2
+    else
+        exa --tree --icons --color=always -L $1
+    fi
+}
