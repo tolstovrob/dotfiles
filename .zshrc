@@ -1,3 +1,7 @@
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Check if anything installed
 if ! type exa > /dev/null 2>&1; then
     echo "ZSH: For enhanced view of ls, install \e[1;31mexa\e[0m package"
@@ -43,3 +47,23 @@ l() {
         exa --tree --icons --color=always -L $1
     fi
 }
+
+alias gi="git init"
+alias gst="git status"
+alias gd="git diff"
+alias glg="git log --oneline --graph --decorate --all"
+alias glf="git log --graph --decorate --all"
+alias gr="git rebase"
+alias gri="git rebase -i"
+alias ga="git add"
+alias gaa="git add -A"
+alias gcmsg="git commit -m"
+alias gcmsga="git commit --amend -m"
+alias gsc="git switch -c"
+alias gsw="git switch"
+alias gb="git branch"
+alias gl="git pull"
+alias glo="git pull origin"
+alias gp="git push"
+alias gpo="git push origin"
+alias gc="git checkout"
