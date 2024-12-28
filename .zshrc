@@ -42,9 +42,9 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 l() {
     if [ "$#" -eq 0 ]; then
-        exa --tree --icons --color=always -L 2
+        exa --tree --icons --color=always -aL 2
     else
-        exa --tree --icons --color=always -L $1
+        exa --tree --icons --color=always -aL $1
     fi
 }
 
