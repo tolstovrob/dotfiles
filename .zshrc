@@ -1,84 +1,32 @@
-# Default exports
+# Oh My zsh config
 export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
 
-# Terminal theme
-ZSH_THEME="cloud"
+
+# Settings
+CASE_SENSITIVE="false"
+HYPHEN_INSENSITIVE="true"
+ENABLE_CORRECTION="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 13
+
 
 # Plugins
-plugins=(
-  git
-  zsh-autosuggestions       # git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-  zsh-syntax-highlighting   # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-)
+plugins=(git)
 
-# Launch Oh-my-zsh
+
+# Configuration
 source $ZSH/oh-my-zsh.sh
+export MANPATH="/usr/local/man:$MANPATH"
+export LANG=en_US.UTF-8
+export EDITOR="nano"
+export ARCHFLAGS="-arch $(uname -m)"
 
-# Setup custom aliases
-export dev="/home/tolstovrob/Документы/dev"
-export clubs="/home/tolstovrob/Документы/clubs"
-export docs="/home/tolstovrob/Документы/docs"
-export ssu="/home/tolstovrob/Документы/ssu"
-alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
-alias lt="eza --tree --hyperlink --icons=always --level"
-alias l="eza --tree --hyperlink --icons=always --level 3"
 
-# Prompt config
-autoload -U colors && colors
+# Aliases
+unalias -m '*'
 
-git_info() {
-  if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-    # Получение текущей ветки
-    local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
-
-    # Если ветка не найдена (например, в состоянии detached HEAD), используем альтернативный способ
-    if [ -z "$branch" ]; then
-      branch=$(git rev-parse --short HEAD 2>/dev/null)  # Показываем SHA коммита
-    fi
-
-    # Получение названия удаленного репозитория
-    local remote_url=$(git remote get-url origin 2>/dev/null)
-    local repo=$(basename "${remote_url%.git}")  # Удаляем .git и получаем название репозитория
-
-    # Проверка состояния репозитория
-    local untracked_files=$(git ls-files --others --exclude-standard)
-    local changes=$(git status --porcelain)
-
-    local git_status=""
-    
-    if [[ -n "$untracked_files" ]]; then
-      git_status="?"  # Есть хотя бы один неотслеживаемый файл
-    elif [[ -n "$changes" ]]; then
-      git_status="✗"  # Есть хотя бы одно изменение и нет неотслеживаемых файлов
-    else
-      git_status="✓"  # Нет изменений
-      # Меняем цвет на зеленый, если нет изменений
-      echo "%{$fg[white]%}── %{$fg[green]%} ${repo}:${branch} ${git_status}%{$reset_color%}"
-      return
-    fi
-
-    # Возвращаем информацию о состоянии репозитория без изменения цвета
-    echo "%{$fg[white]%}── %{$fg[red]%} ${repo}:${branch} ${git_status}" 
-  else
-    echo ""
-  fi
-}
-
-function precmd() {
-  echo ""
-PROMPT="%B%{$fg[white]%}╭── $(date +'%d.%m.%Y') %T ── %{$fg[cyan]%}  %~ $(git_info) %{$fg[white]%} %b
-%B╰── %b%B %{$fg[white]%}% %n@%m -> %b"
-}
-
-# Display launch info
-echo ""
-echo ""
-echo "████████╗ ██████╗ ██╗     ███████╗████████╗ ██████╗ ██╗   ██╗██████╗  ██████╗ ██████╗ "
-echo "╚══██╔══╝██╔═══██╗██║     ██╔════╝╚══██╔══╝██╔═══██╗██║   ██║██╔══██╗██╔═══██╗██╔══██╗"
-echo "   ██║   ██║   ██║██║     ███████╗   ██║   ██║   ██║██║   ██║██████╔╝██║   ██║██████╔╝"
-echo "   ██║   ██║   ██║██║     ╚════██║   ██║   ██║   ██║╚██╗ ██╔╝██╔══██╗██║   ██║██╔══██╗"
-echo "   ██║   ╚██████╔╝███████╗███████║   ██║   ╚██████╔╝ ╚████╔╝ ██║  ██║╚██████╔╝██████╔╝"
-echo "   ╚═╝    ╚═════╝ ╚══════╝╚══════╝   ╚═╝    ╚═════╝   ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ "
-echo ""
-echo ""
-export PATH="$PATH:/opt/nvim-linux64/bin"
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
