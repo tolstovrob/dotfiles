@@ -1,24 +1,21 @@
-# My dotfiles collection
+# Коллекция моих nerdy настроек
 
-## What's here?
+## Что тут есть:
 
 - [Kitty](https://github.com/kovidgoyal/kitty)
-- [Zsh](https://www.zsh.org/) && [Oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+- [Zsh](https://www.zsh.org/) && [Oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) && [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Neovim](https://github.com/neovim/neovim)
-- Neofetch &mdash; install via `sudo apt-get install neofetch` of `sudo pacman -S neofetch`
 
-## What do I need?
+## Как установить?
 
-You need to install zsh, oh-my-zsh, neovim and kitty
+Я обо всем позаботился :)
 
-## How to install?
-
-Open the terminal and type:
+Набрать в терминале:
 
 ```bash
 cd ~
 git clone git@github.com:tolstovrob/dotfiles.git
-./dotfiles/setup.sh
+./dotfiles/setup.sh # -y для автоматического подтверждения
 ```
 
-It should work!
+Перезапустите оболочку и терминал для лучшего эффекта
