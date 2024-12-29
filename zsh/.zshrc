@@ -24,7 +24,7 @@ zstyle ':omz:update' frequency 13
 
 
 # Plugins
-plugins=(git, zsh-autosuggestions, zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 
 # Configuration
@@ -53,10 +53,12 @@ alias gst="git status"
 alias gd="git diff"
 alias gl="git log --oneline --graph --decorate --all"
 alias glf="git log --graph --decorate --all"
-alias gr="git rebase"
+alias grb="git rebase"
 alias gri="git rebase -i"
 alias ga="git add"
 alias gaa="git add -A"
+alias gr="git reset"
+alias grh="git reset --hard"
 alias gcmsg="git commit -m"
 alias gcmsga="git commit --amend -m"
 alias gsc="git switch -c"
