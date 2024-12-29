@@ -72,4 +72,14 @@ alias _="sudo"
 alias __="sudo su"
 alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
 
+
+# Variables
+export dev="~/Документы/dev"
+export ssu="~/Документы/ssu"
+export docs="~/Документы/docs"
+export clubs="~/Документы/clubs"
+export tutors="~/Документы/tutors"
+export lectures="~/Документы/lectures"
+
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
