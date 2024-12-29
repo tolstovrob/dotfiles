@@ -24,7 +24,7 @@ zstyle ':omz:update' frequency 13
 
 
 # Plugins
-plugins=(git)
+plugins=(git, zsh-autosuggestions, zsh-syntax-highlighting)
 
 
 # Configuration
