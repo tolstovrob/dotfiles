@@ -74,12 +74,12 @@ alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
 
 
 # Variables
-export dev="~/Документы/dev"
-export ssu="~/Документы/ssu"
-export docs="~/Документы/docs"
-export clubs="~/Документы/clubs"
-export tutors="~/Документы/tutors"
-export lectures="~/Документы/lectures"
+export dev="/home/tolstovrob/Документы/dev"
+export ssu="/home/tolstovrob/Документы/ssu"
+export docs="/home/tolstovrob/Документы/docs"
+export clubs="/home/tolstovrob/Документы/clubs"
+export tutors="/home/tolstovrob/Документы/tutors"
+export lectures="/home/tolstovrob/Документы/lectures"
 
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
