@@ -48,6 +48,14 @@ l() {
     fi
 }
 
+ll() {
+    if [ "$#" -eq 0 ]; then
+        exa --tree --icons --color=always -aL 2 | less
+    else
+        exa --tree --icons --color=always -aL $1 | less
+    fi
+}
+
 alias gi="git init"
 alias gst="git status"
 alias gd="git diff"
