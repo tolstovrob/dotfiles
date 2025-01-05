@@ -3,8 +3,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Check if anything installed
-if ! type exa > /dev/null 2>&1; then
-    echo "ZSH: For enhanced view of ls, install \e[1;31mexa\e[0m package"
+if ! type eza > /dev/null 2>&1; then
+    echo "ZSH: For enhanced view of ls, install \e[1;31meza\e[0m package"
 fi
 
 # Oh My zsh config
@@ -42,17 +42,17 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 l() {
     if [ "$#" -eq 0 ]; then
-        exa --tree --icons --color=always -aL 2
+        eza --tree --icons --color=always -aL 2
     else
-        exa --tree --icons --color=always -aL $1
+        eza --tree --icons --color=always -aL $1
     fi
 }
 
 ll() {
     if [ "$#" -eq 0 ]; then
-        exa --tree --icons --color=always -aL 2 | less
+        eza --tree --icons --color=always -aL 2 | less
     else
-        exa --tree --icons --color=always -aL $1 | less
+        eza --tree --icons --color=always -aL $1 | less
     fi
 }
 
