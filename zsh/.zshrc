@@ -42,17 +42,17 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 l() {
     if [ "$#" -eq 0 ]; then
-        eza --tree --icons --color=always -aL 2
+        eza --tree --icons=always --hyperlink --color=always -aL 2
     else
-        eza --tree --icons --color=always -aL $1
+        eza --tree --icons=always --hyperlink --color=always -aL $1
     fi
 }
 
 ll() {
     if [ "$#" -eq 0 ]; then
-        eza --tree --icons --color=always -aL 2 | less
+        eza --tree --icons=always --hyperlink --color=always -aL 2 | less
     else
-        eza --tree --icons --color=always -aL $1 | less
+        eza --tree --icons=always --hyperlink --color=always -aL $1 | less
     fi
 }
 
