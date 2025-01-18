@@ -56,6 +56,8 @@ ll() {
     fi
 }
 
+alias gcl="git clone"
+alias grm="git remote"
 alias gi="git init"
 alias gst="git status"
 alias gd="git diff"
