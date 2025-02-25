@@ -5,6 +5,7 @@ removePrevConfig() {
   rm -rf ~/.zshrc
   rm -rf ~/.config/kitty
   rm -rf ~/.config/nvim
+  rm -rf ~/.config/zed
   rm -rf ~/.p10k.zsh
 }
 
@@ -23,6 +24,7 @@ fi
 echo "Creating symbolic links..."
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/kitty ~/.config/kitty
+ln -s ~/dotfiles/zed ~/.config/zed
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 
