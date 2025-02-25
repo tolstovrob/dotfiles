@@ -104,3 +104,5 @@ export lectures="/home/tolstovrob/Документы/lectures"
 
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH=/home/tolstovrob/.cargo/bin:$PATH
