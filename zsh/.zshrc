@@ -63,6 +63,7 @@ alias gst="git status"
 alias gd="git diff"
 alias gl="git log --oneline --graph --decorate --all"
 alias glf="git log --graph --decorate --all"
+alias grfl="git reflog"
 alias grb="git rebase"
 alias gri="git rebase -i"
 alias ga="git add"
@@ -105,4 +106,4 @@ export lectures="/home/tolstovrob/Документы/lectures"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH=/home/tolstovrob/.cargo/bin:$PATH
+export PATH=/home/$USER/.cargo/bin:/home/$USER/.local/bin:$PATH
