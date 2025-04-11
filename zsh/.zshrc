@@ -92,8 +92,8 @@ alias gshp="git stash pop"
 
 alias _="sudo"
 alias __="sudo su"
-alias tl="java -jar ~/Загрузки/TLauncher.v10/TLauncher.jar"
-
+alias la="ls -la"
+alias lah="ls -lah"
 
 # Variables
 export dev="/home/tolstovrob/Документы/dev"
@@ -107,3 +107,4 @@ export lectures="/home/tolstovrob/Документы/lectures"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH=/home/$USER/.cargo/bin:/home/$USER/.local/bin:$PATH
+source ~/powerlevel10k/powerlevel10k.zsh-theme
