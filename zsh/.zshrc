@@ -95,6 +95,8 @@ alias __="sudo su"
 alias la="ls -la"
 alias lah="ls -lah"
 
+alias latex="latexmk -pdf -pvc -interaction=nonstopmode"
+
 # Variables
 export dev="/home/tolstovrob/Документы/dev"
 export ssu="/home/tolstovrob/Документы/ssu"
@@ -108,3 +110,7 @@ export lectures="/home/tolstovrob/Документы/lectures"
 
 export PATH=/home/$USER/.cargo/bin:/home/$USER/.local/bin:$PATH
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
