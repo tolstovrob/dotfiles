@@ -1,15 +1,7 @@
-# font
 font-feature = +liga
 font-family =  JetBrainsMono Nerd Font
-alpha-blending = linear
-
-# window
 theme = dark:gruvbox.conf,light:catpuccin-latte.conf
 background-opacity = 1
-window-width = 1280
-window-height = 720
-maximize = false
-fullscreen = false
-window-save-state = never
+window-save-state = always
 gtk-titlebar-hide-when-maximized = true
 gtk-adwaita = true
