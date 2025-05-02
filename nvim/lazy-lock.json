@@ -1,6 +1,0 @@
-{
-  "gruvbox.nvim": { "branch": "main", "commit": "046e162b4b7998d3eb2cdb7f8d6811b7d8ceb303" },
-  "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
-  "nvim-treesitter": { "branch": "master", "commit": "94ea4f436d2b59c80f02e293466c374584f03b8c" },
-  "nvim-ts-autotag": { "branch": "main", "commit": "a1d526af391f6aebb25a8795cbc05351ed3620b5" }
-}
