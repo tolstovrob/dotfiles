@@ -4,6 +4,7 @@ removePrevConfig() {
   echo "Removing previous configuration..."
   rm -rf ~/.zshrc
   rm -rf ~/.config/kitty
+  rm -rf ~/.config/nvim
   rm -rf ~/.config/ghostty
   rm -rf ~/.config/zed
   rm -rf ~/.p10k.zsh
@@ -23,6 +24,7 @@ fi
 
 echo "Creating symbolic links..."
 ln -s ~/dotfiles/kitty ~/.config/kitty
+ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/ghostty ~/.config/ghostty
 ln -s ~/dotfiles/zed ~/.config/zed
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
