@@ -6,3 +6,6 @@ require('base/editor')
 
 --[[ KEYMAPS ]]--
 require('keys/main')
+
+--[[ PLUGINS ]]--
+require("base/lazy")
