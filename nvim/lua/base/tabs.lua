@@ -5,4 +5,4 @@ local g = vim.g			-- vim global variables alias
 opt.shiftwidth = 2
 opt.tabstop = 2
 opt.smartindent = true
-
+opt.expandtab = true
