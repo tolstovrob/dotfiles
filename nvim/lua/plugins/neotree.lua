@@ -10,6 +10,21 @@ return {
 	opts = {
 		window = {
 			position = "float",
+			popup = {
+				size = {
+					height = "50%",
+					width = "50%",
+				},
+				position = "50%",
+				title = function(state)
+					return "Найдётся всё..."
+				end,
+			},
+		},
+		default_component_configs = {
+			indent = {
+				padding = 2,
+			},
 		},
 	},
 }
