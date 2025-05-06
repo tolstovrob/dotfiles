@@ -98,6 +98,7 @@ alias __="sudo su"
 alias la="ls -la"
 alias lah="ls -lah"
 alias open="xdg-open"
+alias code="flatpak run com.visualstudio.code"
 
 alias latex="latexmk -pdf -pvc -interaction=nonstopmode"
 
