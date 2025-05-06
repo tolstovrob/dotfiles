@@ -97,6 +97,7 @@ alias _="sudo"
 alias __="sudo su"
 alias la="ls -la"
 alias lah="ls -lah"
+alias open="xdg-open"
 
 alias latex="latexmk -pdf -pvc -interaction=nonstopmode"
 
