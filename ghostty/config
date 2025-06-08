@@ -1,5 +1,7 @@
 font-feature = +liga
 font-family =  JetBrainsMono Nerd Font
+font-style = bold
+font-size = 16
 theme = dark:gruvbox-dark.conf,light:gruvbox-light.conf
 background-opacity = 1
 window-save-state = always
