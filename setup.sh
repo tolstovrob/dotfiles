@@ -7,6 +7,7 @@ removePrevConfig() {
   rm -rf ~/.config/nvim
   rm -rf ~/.config/ghostty
   rm -rf ~/.config/zed
+  rm -rf ~/.config/helix
   rm -rf ~/.p10k.zsh
 }
 
@@ -28,6 +29,7 @@ ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/ghostty ~/.config/ghostty
 ln -s ~/dotfiles/zed ~/.config/zed
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/dotfiles/helix ~/.config/helix
 ln -s ~/dotfiles/zsh/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 
 echo "Cloning Zsh plugins..."
