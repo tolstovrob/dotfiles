@@ -98,7 +98,7 @@ alias __="sudo su"
 alias la="ls -la"
 alias lah="ls -lah"
 alias open="xdg-open"
-alias code="flatpak run com.visualstudio.code"
+# alias code="flatpak run com.visualstudio.code"
 
 alias latex="latexmk -pdf -pvc -interaction=nonstopmode"
 
@@ -113,7 +113,7 @@ export lectures="/home/tolstovrob/Документы/lectures"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH=/home/$USER/.cargo/bin:/home/$USER/.local/bin:$PATH
+export PATH=/home/$USER/.cargo/bin:/home/$USER/.local/bin:/usr/bin:$PATH
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export NVM_DIR="$HOME/.nvm"
