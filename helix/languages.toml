@@ -1,0 +1,49 @@
+
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+roots = [".git"]
+language-servers = ["emmet-lsp", "vscode-html-language-server"]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server"]
+
+[languages.javascript]
+language-server = { command = "typescript-language-server", args = "--stdio" }
+
+[languages.typescript]
+language-server = [
+  { command = "typescript-language-server", args = "--stdio" }
+]
+
+[[language]]
+name = "jsx"
+language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-language-server" ]
+
+[[language]]
+name = "tsx"
+language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-language-server" ]
+
+[languages.json]
+language-server = { command = "json-languageserver", args = ["--stdio"] }
+
+[[language]]
+name = "rust"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+comment-token = "//"
+language-server = { command = "rust-analyzer" }
+indent = { tab-width = 4, unit = "    " }
+
+[languages.go]
+language-server = { command = "gopls" }
