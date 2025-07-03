@@ -144,12 +144,12 @@ alias open="xdg-open"
 alias latex="latexmk -pdf -pvc -interaction=nonstopmode"
 
 # Variables
-export dev="/home/tolstovrob/Документы/dev"
-export ssu="/home/tolstovrob/Документы/ssu"
-export docs="/home/tolstovrob/Документы/docs"
-export clubs="/home/tolstovrob/Документы/clubs"
-export tutors="/home/tolstovrob/Документы/tutors"
-export lectures="/home/tolstovrob/Документы/lectures"
+export dev="$HOME/Документы/dev"
+export ssu="$HOME/Документы/ssu"
+export docs="$HOME/Документы/docs"
+export clubs="$HOME/Документы/clubs"
+export tutors="$HOME/Документы/tutors"
+export lectures="$HOME/Документы/lectures"
 
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
