@@ -92,8 +92,8 @@ alias gbD="git branch -D"
 
 alias gpl="git pull"
 alias gplo="git pull origin"
-alias gplm="git pull origin main"
-alias gplms="git pull origin master"
+alias gplom="git pull origin main"
+alias gploms="git pull origin master"
 
 alias gp="git push"
 alias gpo="git push origin"
