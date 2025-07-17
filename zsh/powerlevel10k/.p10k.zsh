@@ -3,6 +3,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   context
