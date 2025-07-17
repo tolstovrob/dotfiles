@@ -25,17 +25,14 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 13
 
-
 # Plugins
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
 
 # Configuration
 source $ZSH/oh-my-zsh.sh
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="nano"
 export ARCHFLAGS="-arch $(uname -m)"
-
 
 # Aliases
 unalias -m "*"
@@ -59,9 +56,6 @@ ll() {
     fi
 }
 
-# Aliases
-
-## Git
 alias gi="git init"
 alias gcl="git clone"
 alias grm="git remote"
@@ -151,13 +145,13 @@ export clubs="$HOME/Документы/clubs"
 export tutors="$HOME/Документы/tutors"
 export lectures="$HOME/Документы/lectures"
 
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH=/home/$USER/.cargo/bin:/home/$USER/.local/bin:/usr/bin:$PATH
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
