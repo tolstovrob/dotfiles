@@ -1,3 +1,5 @@
+setopt NO_PRINT_EXIT_VALUE
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -99,6 +101,8 @@ POWERLEVEL9K_RBENV_PROJECT_ONLY=true
 # Battery settings
 POWERLEVEL9K_BATTERY_LOW_THRESHOLD=20
 POWERLEVEL9K_BATTERY_LOW_FOREGROUND=1
+POWERLEVEL9K_PROMPT_CHAR_OK_VIINS_CONTENT_EXPANSION='➤'
+POWERLEVEL9K_PROMPT_CHAR_ERROR_VIINS_CONTENT_EXPANSION='✗'
 POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=none
 POWERLEVEL9K_BATTERY_BACKGROUND=none
 POWERLEVEL9K_BATTERY_STAGES=()
@@ -116,27 +120,10 @@ POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
 POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=''
 POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''
 
-# Удалить
 function my_postcmd {
   echo
 }
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd my_postcmd
-
-typeset -g ZSH_PROMPT_COUNT=0
-function my_precmd {
-  if [[ $ZSH_PROMPT_COUNT -gt 0 ]]; then
-    print -n ' '
-  fi
-  ((ZSH_PROMPT_COUNT++))
-}
-function my_preexec {
-  if [[ $1 == "clear" ]]; then
-    ZSH_PROMPT_COUNT=0
-  fi
-}
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd my_precmd
-add-zsh-hook preexec my_preexec
 
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
