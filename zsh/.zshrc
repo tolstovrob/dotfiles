@@ -116,8 +116,21 @@ alias ff='find . -type f -name'
 alias fd='find . -type d -name'
 alias fzf='fzf --preview "bat --color=always {}"'
 
+alias ps='ps aux'
+alias psg='ps aux | grep -i'
+alias kill9='kill -9'
+alias killa='killall'
+
+alias duh='du -h --max-depth=1'
+alias dfh='df -h'
+alias free='free -h'
+
 alias cat='bat --paging=never'
 alias less='less -R'
+
+alias myip='curl ipinfo.io/ip'
+alias ports='netstat -tuln'
+alias speed='speedtest-cli'
 
 alias _="sudo"
 alias __="sudo su"
