@@ -46,33 +46,27 @@ alias grm="git remote"
 alias grmv="git remote -v"
 alias grma="git remote add"
 alias grmr="git remote remove"
-
 alias gst="git status"
 alias gl="git log --oneline --graph --decorate --all"
 alias glf="git log --graph --decorate --all"
 alias gll="git log --stat"
 alias gld="git log --patch"
-
 alias ga="git add"
 alias gaa="git add -A"
 alias gc="git commit"
 alias gcm="git commit -m"
 alias gcma="git commit --amend -m"
-
 alias gco="git checkout"
 alias gsw="git switch"
 alias gsc="git switch -c"
-
 alias gb="git branch"
 alias gba="git branch -a"
 alias gbd="git branch -d"
 alias gbD="git branch -D"
-
 alias gpl="git pull"
 alias gplo="git pull origin"
 alias gplom="git pull origin main"
 alias gploms="git pull origin master"
-
 alias gp="git push"
 alias gpo="git push origin"
 alias gpom="git push origin main"
@@ -81,37 +75,49 @@ alias gpf="git push --force-with-lease"
 alias gpfo="git push --force-with-lease origin"
 alias gpfom="git push origin main --force-with-lease"
 alias gpfoms="git push origin master --force-with-lease"
-
 alias gpF="git push --force"
 alias gpFo="git push --force origin"
 alias gpFom="git push origin main --force"
 alias gpFoms="git push origin master --force"
-
 alias gr="git reset"
 alias grh="git reset --hard"
 alias grs="git reset --soft"
-
 alias grb="git rebase"
 alias gri="git rebase -i"
-
 alias grfl="git reflog"
 alias gsh="git stash"
 alias gshp="git stash pop"
 alias gsl="git stash list"
 alias gsa="git stash apply"
 alias gsd="git stash drop"
-
 alias gcln="git clean -fd"
 alias gtag="git tag"
 alias gtags="git tag -l"
 alias gfetch="git fetch --all --prune"
 alias gd="git diff"
 alias gshow="git show"
-
 alias gcp="git cherry-pick"
 alias gcpc="git cherry-pick --continue"
 alias gcpa="git cherry-pick --abort"
 alias gcpl="git cherry-pick --log"
+
+alias ls='ls --color=auto -F'
+alias l='ls -lah'
+alias la='ls -A'
+alias ll='ls -l'
+alias lt='ls -lt'
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+
+alias ff='find . -type f -name'
+alias fd='find . -type d -name'
+alias fzf='fzf --preview "bat --color=always {}"'
+
+alias cat='bat --paging=never'
+alias less='less -R'
 
 alias _="sudo"
 alias __="sudo su"
