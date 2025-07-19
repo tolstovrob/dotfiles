@@ -40,22 +40,6 @@ unalias -m "*"
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
-l() {
-    if [ "$#" -eq 0 ]; then
-        eza --tree --icons=always --hyperlink --color=always -aL 2
-    else
-        eza --tree --icons=always --hyperlink --color=always -aL $1
-    fi
-}
-
-ll() {
-    if [ "$#" -eq 0 ]; then
-        eza --tree --icons=always --hyperlink --color=always -aL 2 | less
-    else
-        eza --tree --icons=always --hyperlink --color=always -aL $1 | less
-    fi
-}
-
 alias gi="git init"
 alias gcl="git clone"
 alias grm="git remote"
