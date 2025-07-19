@@ -141,8 +141,6 @@ alias unzip='unzip'
 
 alias h='history'
 alias hg='history | grep'
-alias c='clear'
-alias e='exit'
 alias now='date "+%Y-%m-%d %H:%M:%S"'
 
 alias xpost='curl -X POST'
