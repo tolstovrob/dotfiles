@@ -1,16 +1,9 @@
 # Enable less color highlight
 export LESS="-R"
 
-# Check if anything installed
-if ! type eza > /dev/null 2>&1; then
-    echo "ZSH: For enhanced view of ls, install \e[1;31meza\e[0m package"
-fi
-
 # Oh My zsh config
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="fwalch"
-
-# sammy
 
 # Settings
 CASE_SENSITIVE="false"
@@ -157,5 +150,3 @@ export docs="$HOME/Документы/docs"
 export clubs="$HOME/Документы/clubs"
 export tutors="$HOME/Документы/tutors"
 export lectures="$HOME/Документы/lectures"
-
-export PATH=/home/$USER/.cargo/bin:/home/$USER/.local/bin:/usr/bin:$PATH
