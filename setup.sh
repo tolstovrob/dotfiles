@@ -8,7 +8,6 @@ removePrevConfig() {
   rm -rf ~/.config/ghostty
   rm -rf ~/.config/zed
   rm -rf ~/.config/helix
-  rm -rf ~/.p10k.zsh
 }
 
 if [ $# -eq 0 ]; then
@@ -30,7 +29,6 @@ ln -s ~/dotfiles/ghostty ~/.config/ghostty
 ln -s ~/dotfiles/zed ~/.config/zed
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/dotfiles/helix ~/.config/helix
-ln -s ~/dotfiles/zsh/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 
 echo "Cloning Zsh plugins..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions || echo "Failed to clone zsh-autosuggestions"
