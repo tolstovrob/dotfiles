@@ -1,10 +1,6 @@
 # Enable less color highlight
 export LESS="-R"
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Check if anything installed
 if ! type eza > /dev/null 2>&1; then
     echo "ZSH: For enhanced view of ls, install \e[1;31meza\e[0m package"
@@ -12,9 +8,9 @@ fi
 
 # Oh My zsh config
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH_THEME="fwalch"
 
-# Load theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# sammy
 
 # Settings
 CASE_SENSITIVE="false"
@@ -162,13 +158,4 @@ export clubs="$HOME/Документы/clubs"
 export tutors="$HOME/Документы/tutors"
 export lectures="$HOME/Документы/lectures"
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 export PATH=/home/$USER/.cargo/bin:/home/$USER/.local/bin:/usr/bin:$PATH
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-source ~/powerlevel10k/powerlevel10k.zsh-theme
