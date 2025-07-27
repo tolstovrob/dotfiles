@@ -4,5 +4,6 @@ font-style = bold
 font-size = 13
 theme = dark:gruvbox-dark.conf,light:gruvbox-light.conf
 background-opacity = 1
+cursor-style = block
 window-save-state = always
 gtk-titlebar-hide-when-maximized = true
