@@ -3,7 +3,6 @@ export LESS="-R"
 
 # Oh My zsh config
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_THEME="fwalch"
 
 # Settings
 CASE_SENSITIVE="false"
@@ -150,5 +149,12 @@ export docs="$HOME/Документы/docs"
 export clubs="$HOME/Документы/clubs"
 export tutors="$HOME/Документы/tutors"
 export lectures="$HOME/Документы/lectures"
+fpath=($fpath "/home/tolstovrob/.zfunctions")
 
-PROMPT='%{$fg[cyan]%}%c%{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%} '
+# Prompt
+TYPEWRITTEN_PROMPT_LAYOUT="pure_verbose"
+TYPEWRITTEN_SYMBOL="$"
+TYPEWRITTEN_CURSOR="block"
+
+autoload -U promptinit; promptinit
+prompt typewritten
