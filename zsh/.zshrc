@@ -154,7 +154,6 @@ fpath=($fpath "/home/tolstovrob/.zfunctions")
 # Prompt
 TYPEWRITTEN_PROMPT_LAYOUT="pure_verbose"
 TYPEWRITTEN_SYMBOL="$"
-TYPEWRITTEN_CURSOR="block"
 
 autoload -U promptinit; promptinit
 prompt typewritten
