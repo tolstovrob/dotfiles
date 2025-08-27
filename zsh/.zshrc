@@ -1,3 +1,9 @@
+# Load stuff
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+fpath=($fpath "/home/tolstovrob/.zfunctions")
+
 # Enable less color highlight
 export LESS="-R"
 
@@ -89,7 +95,7 @@ alias duh='du -h --max-depth=1'
 alias dfh='df -h'
 alias free='free -h'
 
-alias cat='bat --paging=never'
+alias bat='bat --paging=never'
 alias less='less -R'
 
 alias myip='curl ipinfo.io/ip'
@@ -125,7 +131,6 @@ export docs="$HOME/Документы/docs"
 export clubs="$HOME/Документы/clubs"
 export tutors="$HOME/Документы/tutors"
 export lectures="$HOME/Документы/lectures"
-fpath=($fpath "/home/tolstovrob/.zfunctions")
 
 # Prompt
 TYPEWRITTEN_PROMPT_LAYOUT="pure_verbose"
@@ -133,3 +138,4 @@ TYPEWRITTEN_SYMBOL="$"
 
 autoload -U promptinit; promptinit
 prompt typewritten
+
