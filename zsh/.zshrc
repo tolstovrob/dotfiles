@@ -135,6 +135,7 @@ export lectures="$HOME/Документы/lectures"
 # Prompt
 TYPEWRITTEN_PROMPT_LAYOUT="pure_verbose"
 TYPEWRITTEN_SYMBOL="$"
+TYPEWRITTEN_CURSOR="beam"
 
 autoload -U promptinit; promptinit
 prompt typewritten
