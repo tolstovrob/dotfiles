@@ -6,3 +6,5 @@ theme = dark:gruvbox-dark.conf,light:gruvbox-light.conf
 background-opacity = 1
 window-save-state = always
 gtk-titlebar-hide-when-maximized = true
+window-padding-x = 16,16
+window-padding-y = 16,16
