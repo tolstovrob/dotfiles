@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/tolstovrob/dotfiles/zsh'
+let g:netrw_dirhist_7='/home/tolstovrob/dotfiles'
+let g:netrw_dirhist_6='/home/tolstovrob/dotfiles/vim'
+let g:netrw_dirhist_5='/home/tolstovrob/dotfiles'
+let g:netrw_dirhist_4='/home/tolstovrob/dotfiles/vim'
+let g:netrw_dirhist_3='/home/tolstovrob/dotfiles'
+let g:netrw_dirhist_2='/home/tolstovrob/dotfiles/zsh'
+let g:netrw_dirhist_1='/home/tolstovrob/dotfiles'
+let g:netrw_dirhist_0='/usr/share/vim'
+let g:netrw_dirhist_9='/usr/share/vim/doc'
