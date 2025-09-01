@@ -8,6 +8,7 @@ removePrevConfig() {
   rm -rf ~/.config/ghostty
   rm -rf ~/.config/zed
   rm -rf ~/.config/helix
+  rm -rf ~/.vim
 }
 
 if [ $# -eq 0 ]; then
@@ -24,11 +25,13 @@ fi
 
 echo "Creating symbolic links..."
 ln -s ~/dotfiles/kitty ~/.config/kitty
-ln -s ~/dotfiles/nvim ~/.config/nvim
+# ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/ghostty ~/.config/ghostty
 ln -s ~/dotfiles/zed ~/.config/zed
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/dotfiles/helix ~/.config/helix
+ln -s ~/dotfiles/vim/.vim ~/.vim
+ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 
 echo "Cloning Zsh plugins..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions || echo "Failed to clone zsh-autosuggestions"
