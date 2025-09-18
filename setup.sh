@@ -7,6 +7,7 @@ removePrevConfig() {
   rm -rf ~/.config/nvim
   rm -rf ~/.config/ghostty
   rm -rf ~/.config/zed
+  rm -rf ~/.var/app/dev.zed.Zed/config/zed
   rm -rf ~/.config/helix
   rm -rf ~/.vim
 }
@@ -25,9 +26,9 @@ fi
 
 echo "Creating symbolic links..."
 ln -s ~/dotfiles/kitty ~/.config/kitty
-# ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/ghostty ~/.config/ghostty
 ln -s ~/dotfiles/zed ~/.config/zed
+ln -s ~/dotfiles/zed ~/.var/app/dev.zed.Zed/config/zed
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/dotfiles/helix ~/.config/helix
 ln -s ~/dotfiles/vim/.vim ~/.vim
