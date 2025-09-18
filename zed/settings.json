@@ -1,0 +1,55 @@
+{
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light Soft",
+    "dark": "Gruvbox Dark Hard"
+  },
+
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 18,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 16,
+  "buffer_font_features": {
+    "ligatures": true,
+    "calt": true
+  },
+
+  "relative_line_numbers": true,
+  "vim_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+    "use_system_clipboard": "always"
+  },
+
+  "project_panel": {
+    "dock": "right"
+  },
+
+  "toolbar": {
+    "quick_actions": false,
+    "selections_menu": false
+  },
+
+  "hide_mouse": "on_typing_and_movement",
+  "show_edit_predictions": false,
+
+  "inlay_hints": {
+    "enabled": true
+  },
+
+  "git": {
+    "git_gutter": "tracked_files"
+  },
+
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "fixed"
+  },
+
+  "wrap_guides": [120]
+}
