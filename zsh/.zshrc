@@ -122,6 +122,7 @@ alias la="ls -la"
 alias lah="ls -lah"
 alias open="xdg-open"
 
+alias zed="flatpak run dev.zed.Zed"
 alias latex="latexmk -pdf -pvc -interaction=nonstopmode"
 
 # Variables
