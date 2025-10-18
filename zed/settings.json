@@ -1,4 +1,7 @@
 {
+  "agent": {
+    "single_file_review": false
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -16,8 +19,17 @@
   "buffer_font_size": 16,
   "buffer_font_features": {
     "ligatures": true,
-    "calt": true
+    "calt": true,
+    "ss01": false,
+    "ss11": true
   },
+  // Ligatures check:
+  // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
+  // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
+  // <-> <--> <---> <----> <=> <==> <===> <====> :: ::: __
+  // <~~ </ </> /> ~~> == != /= ~= <> === !== !=== =/= =!=
+  // <: := *= *+ <* <*> *> <| <|> |> <. <.> .> +* =* =: :>
+  // (* *) /* */ [| |] {| |} ++ +++ \/ /\ |- -| <!-- <!---
 
   "relative_line_numbers": true,
   "vim_mode": true,
@@ -51,5 +63,27 @@
     "coloring": "fixed"
   },
 
-  "wrap_guides": [120]
+  "wrap_guides": [80],
+
+  "languages": {
+    "Standard ML": {
+      "wrap_guides": [80, 120]
+    },
+    "C": {
+      "wrap_guides": [80]
+    },
+    "Go": {
+      "wrap_guides": [120]
+    }
+  },
+
+  "lsp": {
+    "clangd": {
+      "initialization_options": {
+        "compilationDatabaseCommand": "",
+        "compilationDatabaseDirectory": "",
+        "fallbackFlags": ["-Isrc", "-Wall", "-Wextra"]
+      }
+    }
+  }
 }
