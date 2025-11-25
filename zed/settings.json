@@ -1,4 +1,5 @@
 {
+  "disable_ai": true,
   "agent": {
     "single_file_review": false
   },
@@ -31,7 +32,7 @@
   // <: := *= *+ <* <*> *> <| <|> |> <. <.> .> +* =* =: :>
   // (* *) /* */ [| |] {| |} ++ +++ \/ /\ |- -| <!-- <!---
 
-  "relative_line_numbers": true,
+  "relative_line_numbers": "wrapped",
   "vim_mode": true,
   "vim": {
     "use_smartcase_find": true,
@@ -51,7 +52,7 @@
   "show_edit_predictions": false,
 
   "inlay_hints": {
-    "enabled": true
+    "enabled": false
   },
 
   "git": {
@@ -69,20 +70,27 @@
     "Standard ML": {
       "wrap_guides": [80, 120]
     },
-    "C": {
-      "wrap_guides": [80]
+    "C++": {
+      "tab_size": 2,
+      "format_on_save": "on"
     },
     "Go": {
       "wrap_guides": [120]
+    },
+    "TypeScript": {
+      "wrap_guides": [120],
+      "tab_size": 2
+    },
+    "Svelte": {
+      "wrap_guides": [120],
+      "tab_size": 2
     }
   },
 
   "lsp": {
     "clangd": {
-      "initialization_options": {
-        "compilationDatabaseCommand": "",
-        "compilationDatabaseDirectory": "",
-        "fallbackFlags": ["-Isrc", "-Wall", "-Wextra"]
+      "binary": {
+        "path": "/usr/bin/clangd"
       }
     }
   }
