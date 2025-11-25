@@ -1,9 +1,9 @@
 font-feature = +liga
 font-family =  JetBrainsMono Nerd Font
 font-style = bold
-font-size = 14 
+font-size = 16
 theme = dark:gruvbox-dark.conf,light:gruvbox-light.conf
-background-opacity = 1
+background-opacity = 0.95
 window-save-state = always
 gtk-titlebar-hide-when-maximized = true
 window-padding-x = 16,16
