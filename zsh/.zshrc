@@ -140,4 +140,3 @@ TYPEWRITTEN_CURSOR="beam"
 
 autoload -U promptinit; promptinit
 prompt typewritten
-
