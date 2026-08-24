@@ -8,3 +8,5 @@ window-save-state = always
 gtk-titlebar-hide-when-maximized = true
 window-padding-x = 16,16
 window-padding-y = 16,16
+shell-integration = zsh
+shell-integration-features = true
