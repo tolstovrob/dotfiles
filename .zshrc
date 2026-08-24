@@ -136,6 +136,7 @@ export lectures="$HOME/Документы/lectures"
 # Prompt
 TYPEWRITTEN_PROMPT_LAYOUT="pure_verbose"
 TYPEWRITTEN_SYMBOL="$"
+TYPEWRITTEN_RELATIVE_PATH="adaptive"
 TYPEWRITTEN_CURSOR="beam"
 
 autoload -U promptinit; promptinit
